@@ -58,9 +58,7 @@ class MovieAdapter(private val listener : OnItemClickListener) : PagingDataAdapt
         fun onItemClick(movie: Movie)
     }
 
-    interface onClickListener{
-        fun onClick(movie: Movie)
-    }
+
 
     companion object {
         private val COMPARATOR = object : DiffUtil.ItemCallback<Movie>() {
