@@ -11,9 +11,7 @@ import com.example.demomovietmdb.R
 import com.example.demomovietmdb.data.local.FavoriteMovie
 import com.example.demomovietmdb.data.model.Movie
 import com.example.demomovietmdb.databinding.FragmentFavoriteBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class FavoriteFragment : Fragment(R.layout.fragment_favorite){
     private val viewModel by viewModels<FavoriteViewModel>()
 

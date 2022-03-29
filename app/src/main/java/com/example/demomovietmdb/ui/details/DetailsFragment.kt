@@ -14,14 +14,13 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.example.demomovietmdb.R
 import com.example.demomovietmdb.databinding.FragmentDetailsBinding
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-@AndroidEntryPoint
+
 class DetailsFragment : Fragment(R.layout.fragment_details){
     private val args by navArgs<DetailsFragmentArgs>()
     private val viewModel by viewModels<DetailsMovieModel>()

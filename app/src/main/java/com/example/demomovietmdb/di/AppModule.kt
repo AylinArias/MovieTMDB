@@ -6,21 +6,17 @@ import com.example.demomovietmdb.api.MovieApi
 import com.example.demomovietmdb.data.local.FavoriteMovieDatabase
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
-import dagger.hilt.android.qualifiers.ApplicationContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-@InstallIn(ApplicationComponent::class)
+//@InstallIn(ApplicationComponent::class)
 object AppModule {
 
     @Singleton
     @Provides
-    fun provideFavMovieDatabase(
-        @ApplicationContext app:Context
+    fun provideFavMovieDatabase(app:Context
     ) = Room.databaseBuilder(
         app,
         FavoriteMovieDatabase::class.java,

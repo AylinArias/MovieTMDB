@@ -1,6 +1,7 @@
 package com.example.demomovietmdb.ui.movie
 
 import android.os.Bundle
+import android.provider.Settings
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
@@ -8,19 +9,17 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.demomovietmdb.R
 import com.example.demomovietmdb.data.model.Movie
 import com.example.demomovietmdb.databinding.FragmentMovieBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-
-@AndroidEntryPoint
 class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnItemClickListener{
 
-    private val viewModel by viewModels<MovieViewModel>()
+   private val viewModel by viewModels<MovieViewModel>()
     private var _binding : FragmentMovieBinding? = null
     private val binding get() = _binding!!
 
@@ -97,7 +96,5 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnItemClic
 
         })
     }
-
-
 
 }

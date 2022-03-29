@@ -1,6 +1,6 @@
 package com.example.demomovietmdb.ui.details
 
-import androidx.hilt.lifecycle.ViewModelInject
+
 import androidx.lifecycle.ViewModel
 import com.example.demomovietmdb.data.local.FavoriteMovie
 import com.example.demomovietmdb.data.local.FavoriteMovieRepository
@@ -8,8 +8,9 @@ import com.example.demomovietmdb.data.model.Movie
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class DetailsMovieModel @ViewModelInject constructor(
+class DetailsMovieModel @Inject constructor(
     private val repository : FavoriteMovieRepository
 ) : ViewModel(){
     fun addToFavorite(movie: Movie){
